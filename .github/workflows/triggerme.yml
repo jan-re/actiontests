@@ -22,6 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - run: |
+        echo "hotfix/${{ inputs.myinput }}"
+        echo "hotfix/${{ inputs.myinput2 }}"
+        echo "hotfix/${{ inputs.myinput3 }}"
+
         echo ${{ inputs.myinput }} | wc -c
         echo ${{ inputs.myinput2 }} | wc -c
         echo ${{ inputs.myinput3 }} | wc -c
@@ -30,9 +34,9 @@ jobs:
         echo ${{ inputs.myinput2 }} | wc
         echo ${{ inputs.myinput3 }} | wc
 
-        MYINPUT1=${{ inputs.myinput }}
-        MYINPUT2=${{ inputs.myinput2 }}
-        MYINPUT3=${{ inputs.myinput3 }}
+        MYINPUT1="${{ inputs.myinput }}"
+        MYINPUT2="${{ inputs.myinput2 }}"
+        MYINPUT3="${{ inputs.myinput3 }}"
 
         echo ${#MYINPUT1}
         echo ${#MYINPUT2}
