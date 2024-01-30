@@ -7,10 +7,21 @@ on:
         description: "Testing whitespace"
         type: string
         required: true
+      myinput2:
+        description: "Testing whitespace"
+        type: string
+        required: true
+      myinput3:
+        description: "Testing whitespace"
+        type: string
+        required: true
 
 jobs:
   check_whitespace:
     name: Validate input
     runs-on: ubuntu-latest
     steps:
-     - run: echo $ {{ inputs.myinput }}
+     - run: |
+      echo ${{ inputs.myinput }} | wc -m
+      echo ${{ inputs.myinput2 }} | wc -m
+      echo ${{ inputs.myinput3 }} | wc -m
