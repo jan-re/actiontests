@@ -22,6 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - run: |
-        echo ${{ inputs.myinput }} | wc -m
-        echo ${{ inputs.myinput2 }} | wc -m
-        echo ${{ inputs.myinput3 }} | wc -m
+        echo ${{ inputs.myinput }} | wc -c
+        echo ${{ inputs.myinput2 }} | wc -c
+        echo ${{ inputs.myinput3 }} | wc -c
+
+        echo ${{ inputs.myinput }} | wc
+        echo ${{ inputs.myinput2 }} | wc
+        echo ${{ inputs.myinput3 }} | wc
+
+        MYINPUT1=${{ inputs.myinput }}
+        MYINPUT2=${{ inputs.myinput2 }}
+        MYINPUT3=${{ inputs.myinput3 }}
+
+        echo ${#MYINPUT1}
+        echo ${#MYINPUT2}
+        echo ${#MYINPUT3}
