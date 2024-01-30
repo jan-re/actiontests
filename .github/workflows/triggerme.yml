@@ -1,0 +1,16 @@
+name: Get input with whitespace
+
+on:
+  workflow_dispatch:
+    inputs:
+      myinput:
+        description: "Testing whitespace"
+        type: string
+        required: true
+
+jobs:
+  check_whitespace:
+    name: Validate input
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo $ {{ inputs.myinput }}
