@@ -5,7 +5,7 @@ on:
     inputs:
       myinput:
         description: "Testing whitespace"
-        type: bool
+        type: boolean
         required: true
 
 jobs:
