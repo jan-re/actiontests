@@ -5,15 +5,7 @@ on:
     inputs:
       myinput:
         description: "Testing whitespace"
-        type: string
-        required: true
-      myinput2:
-        description: "Testing whitespace"
-        type: string
-        required: true
-      myinput3:
-        description: "Testing whitespace"
-        type: string
+        type: bool
         required: true
 
 jobs:
